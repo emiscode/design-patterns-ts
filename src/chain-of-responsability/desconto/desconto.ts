@@ -1,7 +1,11 @@
 import { Orcamento } from "../../@core/orcamento";
 
 interface Desconto {
-  calcular(orcamento: Orcamento | null): number
+  calcular(orcamento: Orcamento): number
 }
 
-export { Desconto }
+abstract class AbsDesconto {
+  constructor(protected proximo: Desconto) { }
+}
+
+export { Desconto, AbsDesconto }

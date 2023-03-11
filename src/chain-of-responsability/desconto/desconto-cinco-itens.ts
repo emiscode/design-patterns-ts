@@ -1,9 +1,7 @@
 import { Orcamento } from "../../@core/orcamento";
-import { Desconto } from "./desconto";
+import { Desconto, AbsDesconto } from "./desconto";
 
-class DescontoMaisCincoItens implements Desconto {
-  constructor (private proximo: Desconto) {}
-
+class DescontoMaisCincoItens extends AbsDesconto implements Desconto {
   calcular(orcamento: Orcamento): number {
     if (orcamento.quantidade > 5) {
       return orcamento.valor * 0.1
