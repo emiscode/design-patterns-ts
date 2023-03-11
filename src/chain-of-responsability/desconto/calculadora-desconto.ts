@@ -1,12 +1,17 @@
 import { Orcamento } from "../../@core/orcamento";
+import { Desconto } from "./desconto";
+import { DescontoMaisCincoItens } from "./desconto-cinco-itens";
+import { DescontoNaoAplicado } from "./desconto-nao-aplicado";
+import { DescontoValorMaiorQuinhentos } from "./desconto-valor-quinhentos";
 
 class CalculadoraDesconto {
   calcular(orcamento: Orcamento): number {
-    if (orcamento.quantidade > 5) {
-      return orcamento.valor * 0.1
-    }
+    const desconto: Desconto =
+      new DescontoMaisCincoItens(
+        new DescontoValorMaiorQuinhentos(
+          new DescontoNaoAplicado()))
 
-    return 0.0
+    return desconto.calcular(orcamento)
   }
 }
 

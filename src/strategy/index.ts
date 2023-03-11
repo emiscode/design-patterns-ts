@@ -3,6 +3,8 @@ import { ICMS } from "./imposto/ICMS";
 import { CalculadoraImposto } from "./imposto/calculadora-imposto";
 import { Orcamento } from "../@core/orcamento";
 
+console.log('LOG => Testing Strategy')
+
 const orcamento = new Orcamento(100, 1)
 const calculadoraImposto = new CalculadoraImposto()
 const impostoISS = calculadoraImposto.calcular(orcamento, new ISS())

@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "yarn ts-node src/index.ts",
         "strategy": "yarn ts-node src/strategy/index.ts",
-        "chain-of-responsability": "yarn ts-node src/strategy/index.ts"
+        "chain-of-responsability": "yarn ts-node src/chain-of-responsability/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",
