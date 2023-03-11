@@ -5,7 +5,9 @@
     "author": "Emilio Scodeler <emilio.scodeler@solides.com.br>",
     "license": "MIT",
     "scripts": {
-        "dev": "yarn ts-node src/index.ts"
+        "dev": "yarn ts-node src/index.ts",
+        "strategy": "yarn ts-node src/strategy/index.ts",
+        "chain-of-responsability": "yarn ts-node src/strategy/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",

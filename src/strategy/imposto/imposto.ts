@@ -1,4 +1,4 @@
-import { Orcamento } from "../orcamento/orcamento";
+import { Orcamento } from "../../@core/orcamento"
 
 interface Imposto {
   calcular(orcamento: Orcamento): number
