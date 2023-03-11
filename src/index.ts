@@ -1,8 +1,8 @@
 
-import { ISS } from "./imposto/ISS";
-import { ICMS } from "./imposto/ICMS";
-import { Orcamento } from "./orcamento/orcamento";
-import { CalculadoraImposto } from "./imposto/calculadora-imposto";
+import { ISS } from "./strategy/imposto/ISS";
+import { ICMS } from "./strategy/imposto/ICMS";
+import { Orcamento } from "./strategy/orcamento/orcamento";
+import { CalculadoraImposto } from "./strategy/imposto/calculadora-imposto";
 
 const orcamento = new Orcamento(100)
 const calculadoraImposto = new CalculadoraImposto()
