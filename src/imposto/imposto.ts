@@ -2,12 +2,10 @@ import { Orcamento } from "../orcamento/orcamento";
 import { TipoImposto } from "./tipoImposto";
 
 class CalculadoraDeImpostos {
-  constructor(private tipoImposto: TipoImposto) { }
-
-  calcular(orcamento: Orcamento): number {
+  calcular(orcamento: Orcamento, tipoImposto: TipoImposto): number {
     let result = 0.0
 
-    switch (this.tipoImposto) {
+    switch (tipoImposto) {
       case "ICMS":
         result = orcamento.valor * 0.1
         break

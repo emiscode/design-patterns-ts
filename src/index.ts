@@ -14,14 +14,9 @@ console.log(`INFO => app ${JSON.stringify(app)}`)
 
 const orcamento = new Orcamento(100)
 
-const impostoICMS = new CalculadoraDeImpostos(TipoImposto.ICMS)
+const imposto = new CalculadoraDeImpostos()
 console.log(`INFO => orcamento ${JSON.stringify(orcamento)} =>
-  imposto ${JSON.stringify(impostoICMS)} => 
-  resultado => ${impostoICMS.calcular(orcamento)}`)
-
-const impostoISS = new CalculadoraDeImpostos(TipoImposto.ISS)
-console.log(`INFO => orcamento ${JSON.stringify(orcamento)} =>
-  imposto ${JSON.stringify(impostoISS)} => 
-  resultado => ${impostoISS.calcular(orcamento)}`)
+  imposto ${JSON.stringify(imposto)} => 
+  resultado => ${imposto.calcular(orcamento, TipoImposto.ISS)}`)
 
 export default App
