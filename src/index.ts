@@ -1,22 +1,13 @@
-import { CalculadoraDeImpostos } from "./imposto/imposto"
-import { TipoImposto } from "./imposto/tipoImposto"
-import { Orcamento } from "./orcamento/orcamento"
 
-type App = {
-  status: string
-}
-
-const app: App = {
-  status: 'Running',
-}
-
-console.log(`INFO => app ${JSON.stringify(app)}`)
+import { ISS } from "./imposto/ISS";
+import { ICMS } from "./imposto/ICMS";
+import { Orcamento } from "./orcamento/orcamento";
+import { CalculadoraImposto } from "./imposto/calculadora-imposto";
 
 const orcamento = new Orcamento(100)
+const calculadoraImposto = new CalculadoraImposto()
+const impostoISS = calculadoraImposto.calcular(orcamento, new ISS())
+const impostoICMS = calculadoraImposto.calcular(orcamento, new ICMS())
 
-const imposto = new CalculadoraDeImpostos()
-console.log(`INFO => orcamento ${JSON.stringify(orcamento)} =>
-  imposto ${JSON.stringify(imposto)} => 
-  resultado => ${imposto.calcular(orcamento, TipoImposto.ISS)}`)
-
-export default App
+console.log(`LOG => orcamento => ${orcamento.valor} => ISS ${impostoISS}`)
+console.log(`LOG => orcamento => ${orcamento.valor} => ICMS ${impostoICMS}`)
