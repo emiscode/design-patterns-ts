@@ -1,7 +1,7 @@
 import { Orcamento } from "../@core/orcamento"
 import { CalculadoraDesconto } from "./calculadora-desconto"
 
-console.log('LOG => Testing Chain of Responsability')
+console.log('LOG => Testing Chain of Responsability V2')
 
 const orcamento200 = new Orcamento(200, 6)
 let calculadoraDesconto = new CalculadoraDesconto()
