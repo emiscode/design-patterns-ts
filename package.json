@@ -12,7 +12,8 @@
         "template-method": "yarn ts-node src/template-method/index.ts",
         "state-pattern": "yarn ts-node src/state/index.ts",
         "command": "yarn ts-node src/command/index.ts",
-        "command-handler": "yarn ts-node src/command-handler/index.ts"
+        "command-handler": "yarn ts-node src/command-handler/index.ts",
+        "observer": "yarn ts-node src/observer/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",
