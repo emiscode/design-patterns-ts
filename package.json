@@ -8,7 +8,8 @@
         "dev": "yarn ts-node src/index.ts",
         "strategy": "yarn ts-node src/strategy/index.ts",
         "chain-of-responsability": "yarn ts-node src/chain-of-responsability/index.ts",
-        "chain-of-responsability-v2": "yarn ts-node src/chain-of-responsability-v2/index.ts"
+        "chain-of-responsability-v2": "yarn ts-node src/chain-of-responsability-v2/index.ts",
+        "template-method": "yarn ts-node src/template-method/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",
