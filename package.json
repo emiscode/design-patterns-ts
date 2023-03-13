@@ -11,7 +11,8 @@
         "chain-of-responsability-v2": "yarn ts-node src/chain-of-responsability-v2/index.ts",
         "template-method": "yarn ts-node src/template-method/index.ts",
         "state-pattern": "yarn ts-node src/state/index.ts",
-        "command": "yarn ts-node src/command/index.ts"
+        "command": "yarn ts-node src/command/index.ts",
+        "command-handler": "yarn ts-node src/command-handler/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",
