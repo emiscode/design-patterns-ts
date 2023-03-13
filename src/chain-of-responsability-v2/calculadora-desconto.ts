@@ -1,5 +1,6 @@
 import { Orcamento } from "../@core/orcamento"
 import { DescontoMaisCincoItens } from "./desconto-cinco-itens"
+import { DescontoGerente } from "./desconto-gerente"
 import { DescontoValorMaiorQuinhentos } from "./desconto-valor-quinhentos"
 
 
@@ -8,8 +9,11 @@ class CalculadoraDesconto {
 
     const desconto = new DescontoMaisCincoItens()
     const descontoQuinhentos = new DescontoValorMaiorQuinhentos()
+    const descontoGerente = new DescontoGerente()
 
-    desconto.proximo(descontoQuinhentos)
+    desconto
+      .proximo(descontoQuinhentos)
+      ?.proximo(descontoGerente)
 
     return desconto.calcular(orcamento)
   }
