@@ -14,6 +14,8 @@ class FakeService implements Service {
   }
 }
 
+console.log('LOG => Testing Command Handler')
+
 const geradorPedido = new GeraPedido('Emilio', 200, 3)
 const geradorPedidoHandler = new GeraPedidoHandler(new FakeRepository(), new FakeService())
 

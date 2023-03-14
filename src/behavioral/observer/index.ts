@@ -14,6 +14,8 @@ class FakeEmail implements Service {
   }
 }
 
+console.log('LOG => Testing Observer')
+
 const geradorPedido = new GeraPedido('Emilio', 200, 3)
 const geradorPedidoHandler = new GeraPedidoHandler([new FakeRepository(), new FakeEmail])
 
