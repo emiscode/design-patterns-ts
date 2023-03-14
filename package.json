@@ -13,7 +13,8 @@
         "state-pattern": "yarn ts-node src/behavioral/state/index.ts",
         "command": "yarn ts-node src/behavioral/command/index.ts",
         "command-handler": "yarn ts-node src/behavioral/command-handler/index.ts",
-        "observer": "yarn ts-node src/behavioral/observer/index.ts"
+        "observer": "yarn ts-node src/behavioral/observer/index.ts",
+        "adapter": "yarn ts-node src/structural/adapter/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",
