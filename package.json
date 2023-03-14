@@ -6,14 +6,14 @@
     "license": "MIT",
     "scripts": {
         "dev": "yarn ts-node src/index.ts",
-        "strategy": "yarn ts-node src/strategy/index.ts",
-        "chain-of-responsability": "yarn ts-node src/chain-of-responsability/index.ts",
-        "chain-of-responsability-v2": "yarn ts-node src/chain-of-responsability-v2/index.ts",
-        "template-method": "yarn ts-node src/template-method/index.ts",
-        "state-pattern": "yarn ts-node src/state/index.ts",
-        "command": "yarn ts-node src/command/index.ts",
-        "command-handler": "yarn ts-node src/command-handler/index.ts",
-        "observer": "yarn ts-node src/observer/index.ts"
+        "strategy": "yarn ts-node src/behavioral/strategy/index.ts",
+        "chain-of-responsability-v1": "yarn ts-node src/behavioral/chain-of-responsability/v1/index.ts",
+        "chain-of-responsability-v2": "yarn ts-node src//behavioral/chain-of-responsability/v2/index.ts",
+        "template-method": "yarn ts-node src/behavioral/template-method/index.ts",
+        "state-pattern": "yarn ts-node src/behavioral/state/index.ts",
+        "command": "yarn ts-node src/behavioral/command/index.ts",
+        "command-handler": "yarn ts-node src/behavioral/command-handler/index.ts",
+        "observer": "yarn ts-node src/behavioral/observer/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",

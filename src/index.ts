@@ -1,1 +1,1 @@
-console.log('LOG => app running')
+console.log('LOG => Design Patterns')
