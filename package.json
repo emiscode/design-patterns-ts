@@ -16,7 +16,8 @@
         "observer": "yarn ts-node src/behavioral/observer/index.ts",
         "adapter": "yarn ts-node src/structural/adapter/index.ts",
         "decorator": "yarn ts-node src/structural/decorator/index.ts",
-        "composite": "yarn ts-node src/structural/composite/index.ts"
+        "composite": "yarn ts-node src/structural/composite/index.ts",
+        "facade": "yarn ts-node src/structural/facade/index.ts"
     },
     "devDependencies": {
         "@tsconfig/recommended": "^1.0.2",
