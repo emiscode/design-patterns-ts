@@ -14,7 +14,7 @@ class OrcamentoProxy extends Orcamento {
   }
 
   getOrcamento(): Orcamento {
-    return this.getOrcamento()
+    return this._orcamento
   }
 }
 
