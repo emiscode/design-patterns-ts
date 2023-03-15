@@ -1,26 +1,61 @@
-import { ItemOrcamento } from "../../@shared/item-orcamento"
+import { OrcamentoEmAnalise } from "./orcamento-em-analise"
+import { SituacaoOrcamento } from "./situacao-orcamento"
 
-class Orcamento {
+interface IOrcamento {
+  getValor(): number
+}
+
+class Orcamento implements IOrcamento {
   private _valor: number
-  private _itens: Array<ItemOrcamento>
+  private _itens: Array<IOrcamento>
+  private _situacao: SituacaoOrcamento
 
   constructor() {
     this._valor = 0.0
     this._itens = []
+    this._situacao = new OrcamentoEmAnalise()
   }
 
-  addItem(item: ItemOrcamento): void {
+  aplicarDescontoExtra(): void {
+    this._valor = this._valor - this._situacao.calcularValorDescontoExtra(this)
+  }
+
+  alterarSituacao(situacao: SituacaoOrcamento) {
+    this._situacao = situacao
+  }
+
+  aprovar() {
+    this._situacao.aprovar(this)
+  }
+
+  reprovar() {
+    this._situacao.reprovar(this)
+  }
+
+  finalizar() {
+    this._situacao.finalizar(this)
+  }
+
+  verSituacao(): string {
+    return this._situacao.constructor.name
+  }
+
+  get situacao(): SituacaoOrcamento {
+    return this._situacao
+  }
+
+  addItem(item: IOrcamento): void {
     this._itens.push(item)
   }
 
-  itens(): Array<ItemOrcamento> {
+  itens(): Array<IOrcamento> {
     return this._itens
   }
 
-  valor(): number {
+  getValor(): number {
     const valores: Array<number> = []
 
-    this._itens.forEach(item => valores.push(item.valor))
+    this._itens.forEach(item => valores.push(item.getValor()))
     this._valor = valores.reduce((sum, valor) => sum + valor)
 
     return this._valor
@@ -31,4 +66,4 @@ class Orcamento {
   }
 }
 
-export { Orcamento }
+export { Orcamento, IOrcamento }
